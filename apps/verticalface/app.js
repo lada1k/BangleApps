@@ -120,7 +120,7 @@ Bangle.on('lcdPower',on=>{
 });
 
 // Launcher could be shown only in "on" state
-showLauncher(function){
+function showLauncher() {
   if(LcdIsOn){
     Bangle.showLauncher();
   }
