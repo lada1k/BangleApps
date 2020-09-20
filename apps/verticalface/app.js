@@ -8,7 +8,7 @@ require("Font8x12").add(Graphics);
 
 let HRMstate = false;
 let currentHRM = "CALC";
-
+let LcdIsOn = true;
 
 function drawTimeDate() {
   var d = new Date();
@@ -111,18 +111,27 @@ Bangle.on('lcdPower',on=>{
     drawBPM(HRMstate);
     drawTimeDate();
     drawBattery();
+    LcdIsOn = true;
   } else {
     //Screen off
     clearInterval(secondInterval);
+    LcdIsOn = false;
   }
 });
 
+// Launcher could be shown only in "on" state
+showLauncher(function){
+  if(LcdIsOn){
+    Bangle.showLauncher();
+  }
+}
+
 // Show launcher when middle button pressed
-setWatch(Bangle.showLauncher, BTN2, { repeat: false, edge: "falling" });
+setWatch(showLauncher, BTN2, { repeat: false, edge: "falling" });
 
 Bangle.on('touch', function(button) {
   if(button == 1 || button == 2){
-    Bangle.showLauncher();
+    showLauncher();
   }
 });
 
