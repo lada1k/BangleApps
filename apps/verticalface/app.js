@@ -39,16 +39,15 @@ function drawTimeDate() {
 
 //We will create custom "Widgets" for our face.
 
-function drawSteps() {
-  //Reset to defaults.
+function drawTemperature() {
+  var T = E.getTemperature();
   g.reset();
-  // draw the date (2x size 7 segment)
   g.setColor('#7f8c8d');
   g.setFont("8x12",2);
   g.setFontAlign(-1,0); // align right bottom
-  g.drawString("STEPS", 145, 40, true /*clear background*/);
+  g.drawString("TEMP", 145, 40, true /*clear background*/);
   g.setColor('#bdc3c7');
-  g.drawString("-", 145, 65, true /*clear background*/);
+  g.drawString(`${T} °C`, 145, 65, true /*clear background*/);
 }
 
 function drawBPM(on) {
@@ -93,7 +92,7 @@ g.clear();
 
 // draw immediately at first
 drawTimeDate();
-drawSteps();
+drawTemperature();
 drawBPM();
 drawBattery();
 
@@ -111,6 +110,7 @@ Bangle.on('lcdPower',on=>{
     drawBPM(HRMstate);
     drawTimeDate();
     drawBattery();
+    drawTemperature();
     LcdIsOn = true;
   } else {
     //Screen off
