@@ -41,13 +41,14 @@ function drawTimeDate() {
 
 function drawTemperature() {
   var T = E.getTemperature();
+  T = T.toFixed(1);
   g.reset();
   g.setColor('#7f8c8d');
   g.setFont("8x12",2);
   g.setFontAlign(-1,0); // align right bottom
   g.drawString("TEMP", 145, 40, true /*clear background*/);
   g.setColor('#bdc3c7');
-  g.drawString(`${T} °C`, 145, 65, true /*clear background*/);
+  g.drawString(`${T} C`, 145, 65, true /*clear background*/);
 }
 
 function drawBPM(on) {
