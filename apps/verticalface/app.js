@@ -127,11 +127,13 @@ function showLauncher() {
 // Show launcher when middle button pressed
 setWatch(showLauncher, BTN2, { repeat: false, edge: "falling" });
 
+/*
 Bangle.on('touch', function(button) {
   if(button == 1 || button == 2){
     showLauncher();
   }
 });
+*/
 
 //HRM Controller.
 setWatch(function(){
