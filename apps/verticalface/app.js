@@ -96,6 +96,8 @@ drawBattery();
 
 var secondInterval = setInterval(()=>{
   drawTimeDate();
+  drawBattery();
+  drawTemperature();
 }, 15000);
 
 // Stop updates when LCD is off, restart when on
