@@ -1,11 +1,11 @@
 [
   { "id": "boot",
     "name": "Bootloader",
+    "tags": "tool,system",
+    "type":"bootloader",
     "icon": "bootloader.png",
     "version":"0.21",
     "description": "This is needed by Bangle.js to automatically load the clock, menu, widgets and settings",
-    "tags": "tool,system",
-    "type":"bootloader",
     "storage": [
       {"name":".boot0","url":"boot0.js"},
       {"name":".bootcde","url":"bootloader.js"}
@@ -2209,6 +2209,19 @@
       {"name":"cscsensor.img","url":"cscsensor-icon.js","evaluate":true}
     ]
   },
+  { "id": "fileman",
+    "name": "File manager",
+    "shortName":"FileManager",
+    "icon": "icons8-filing-cabinet-48.png",
+    "version":"0.01",
+    "description": "Simple file manager, allows user to examine watch storage and display, load or delete individual files",
+    "tags": "tools",
+    "readme": "README.md",
+    "storage": [
+      {"name":"fileman.app.js","url":"fileman.app.js"},
+      {"name":"fileman.img","url":"fileman-icon.js","evaluate":true}
+    ]
+  },
  { "id": "worldclock",
     "name": "World Clock - 4 time zones",
     "shortName":"World Clock",
@@ -2224,5 +2237,19 @@
       {"name":"worldclock.settings.json"},
       {"name":"worldclock.img","url":"worldclock-icon.js","evaluate":true}
   ]
- }
+ },
+
+{ "id": "digiclock",
+  "name": "Digital Clock Face",
+  "shortName":"Digi Clock",
+  "icon": "digiclock.png",
+  "version":"0.01",
+  "description": "A simple digital clock with the time, day, month, and year",
+  "tags": "clock",
+  "type" : "clock",
+  "storage": [
+    {"name":"digiclock.app.js","url":"digiclock.js"},
+    {"name":"digiclock.img","url":"digiclock-icon.js","evaluate":true}
+ ]
+} 
 ]
