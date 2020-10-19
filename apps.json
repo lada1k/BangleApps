@@ -118,6 +118,24 @@
       {"name":"welcome.json"}
     ]
   },
+  { "id": "mywelcome",
+    "name": "Customised Welcome",
+    "shortName": "My Welcome",
+    "icon": "app.png",
+    "version":"0.10",
+    "description": "Appears at first boot and explains how to use Bangle.js. Like 'Welcome', but can be customised with a greeting",
+    "tags": "start,welcome",
+    "custom":"custom.html",
+    "storage": [
+      {"name":"mywelcome.boot.js","url":"boot.js"},
+      {"name":"mywelcome.app.js","url":"app.js"},
+      {"name":"mywelcome.settings.js","url":"settings.js"},
+      {"name":"mywelcome.img","url":"app-icon.js","evaluate":true}
+    ],
+    "data": [
+      {"name":"mywelcome.json"}
+    ]
+  },
   { "id": "gbridge",
     "name": "Gadgetbridge",
     "icon": "app.png",
@@ -1718,7 +1736,7 @@
     "id": "simpletimer",
     "name": "Timer",
     "icon": "app.png",
-    "version": "0.05",
+    "version": "0.07",
     "description": "Simple timer, useful when playing board games or cooking",
     "tags": "timer",
     "readme": "README.md",
@@ -1940,8 +1958,8 @@
     "name": "Vertical watch face",
     "shortName":"Vertical Face",
     "icon": "app.png",
-    "version":"0.06",
-    "description": "A simple vertical watch face with the date.",
+    "version":"0.07",
+    "description": "A simple vertical watch face with the date. Heart rate monitor is toggled with BTN1",
     "tags": "clock",
     "type":"clock",
     "allow_emulator":true,
@@ -2238,7 +2256,6 @@
       {"name":"worldclock.img","url":"worldclock-icon.js","evaluate":true}
   ]
  },
-
 { "id": "digiclock",
   "name": "Digital Clock Face",
   "shortName":"Digi Clock",
@@ -2251,5 +2268,31 @@
     {"name":"digiclock.app.js","url":"digiclock.js"},
     {"name":"digiclock.img","url":"digiclock-icon.js","evaluate":true}
  ]
-} 
+},
+  { "id": "dsdrelay",
+    "name": "DSD BLE Relay controller",
+    "shortName":"DSDRelay",
+    "icon": "icons8-relay-48.png",
+    "version":"0.01",
+    "description": "Control BLE relay board from the watch",
+    "tags": "ble,bluetooth",
+    "readme": "README.md",
+    "storage": [
+      {"name":"dsdrelay.app.js","url":"dsdrelay.app.js"},
+      {"name":"dsdrelay.img","url":"dsdrelay-icon.js","evaluate":true}
+    ]
+  },
+  { "id": "mandel",
+    "name": "Mandelbrot",
+    "shortName":"Mandel",
+    "icon": "mandel.png",
+    "version":"0.01",
+    "description": "Draw a zoomable Mandelbrot set",
+    "tags": "game",
+    "readme": "README.md",
+    "storage": [
+      {"name":"mandel.app.js","url":"mandel.min.js"},
+      {"name":"mandel.img","url":"mandel-icon.js","evaluate":true}
+    ]
+  }
 ]
