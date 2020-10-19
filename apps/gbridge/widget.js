@@ -185,7 +185,7 @@
   function changedConnectionState() {
     WIDGETS["gbridgew"].draw();
     g.flip(); // turns screen on
-    Bangle.buzz(50); // let the user know
+    Bangle.buzz(30); // let the user know
   }
 
   function reload() {
