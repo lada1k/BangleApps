@@ -1,5 +1,6 @@
-Bangle.loadWidgets();
-Bangle.drawWidgets();
+// memory issue
+//Bangle.loadWidgets();
+//Bangle.drawWidgets();
 
 var settings = require("Storage").readJSON("gpsrec.json",1)||{};
 var osm;
