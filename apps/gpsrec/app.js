@@ -14,8 +14,10 @@ function getFN(n) {
 
 function updateSettings() {
   require("Storage").write("gpsrec.json", settings);
-  if (WIDGETS["gpsrec"])
-    WIDGETS["gpsrec"].reload();
+  /* If widget is not loaded, update settings directly */
+  settings = require("Storage").readJSON("gpsrec.json",1)||{};
+  settings.period = settings.period||10;
+  settings.file |= 0;
 }
 
 function showMainMenu() {
