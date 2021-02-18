@@ -13,7 +13,7 @@ function drawTimeDate() {
   }
   
   if (m < 10) {
-    m = "0" + h;
+    m = "0" + m;
   }
 
   var daysOfWeek = ["SUN", "MON", "TUE","WED","THU","FRI","SAT"];
